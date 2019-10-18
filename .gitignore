@@ -1,0 +1,4 @@
+node_modules
+instrumented
+coverage
+*_report.txt

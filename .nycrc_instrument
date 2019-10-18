@@ -1,0 +1,6 @@
+{
+  "all": true,
+  "in-place": true,
+  "source-map": true,
+  "produce-source-map": true
+}

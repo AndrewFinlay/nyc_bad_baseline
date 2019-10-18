@@ -1,0 +1,14 @@
+{
+  "include": [
+    "**/instrumented/**/*.js"
+  ],
+  "all": true,
+  "source-map": true,
+  "produce-source-map": true,
+  "reporter": [
+    "lcov",
+    "text"
+  ],
+  "temp-dir": "coverage/baseline/nyc_output_instrumented",
+  "report-dir": "coverage/reports/instrumented"
+}

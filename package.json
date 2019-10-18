@@ -1,0 +1,17 @@
+{
+  "name": "nyc_bad_baseline",
+  "version": "1.0.0",
+  "description": "Show difference in baseline coverage generated from raw and pre-intrumented code",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf instrumented coverage",
+    "instrument": "cp -pR lib instrumented; nyc instrument --nycrc-path=.nycrc_instrument instrumented",
+    "baseline-lib": "nyc --nycrc-path=.nycrc_baseline_lib /usr/bin/true 1> lib_baseline_report.txt",
+    "baseline-instrumented": "nyc --nycrc-path=.nycrc_baseline_instrumented /usr/bin/true 1> instrumented_baseline_report.txt",
+    "test": "npm run clean && npm run instrument && npm run baseline-lib && npm run baseline-instrumented"
+  },
+  "devDependencies": {
+    "nyc": "^15.0.0-beta.0"
+  }
+}

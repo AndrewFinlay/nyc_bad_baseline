@@ -1,0 +1,14 @@
+{
+  "include": [
+    "**/lib/**/*.js"
+  ],
+  "all": true,
+  "source-map": true,
+  "produce-source-map": true,
+  "reporter": [
+    "lcov",
+    "text"
+  ],
+  "temp-dir": "coverage/baseline/nyc_output_lib",
+  "report-dir": "coverage/reports/lib"
+}
